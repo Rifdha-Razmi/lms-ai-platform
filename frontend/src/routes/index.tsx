@@ -44,6 +44,11 @@ export const router = createBrowserRouter(
       children: [
         { path: '/', element: <Home /> },
         // Public catalog (PRD §8.2 — public endpoints)
+        { path: '/catalog', element: page(() => import('@/pages/course-catalog/CatalogPage')) },
+        {
+          path: '/courses/:courseId',
+          element: page(() => import('@/pages/course-catalog/CourseDetailPage')),
+        },
 
         {
           element: <ProtectedRoute />,
