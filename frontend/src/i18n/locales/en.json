@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "catalog": "Course Catalog",
+    "myLearning": "My learning",
+    "aiTutor": "AI tutor",
+    "quizzes": "Quizzes",
+    "assignments": "Assignments",
+    "achievements": "Achievements",
+    "certificates": "Certificates",
+    "studyPlan": "Study plan",
+    "myCourses": "My courses",
+    "grading": "Grading",
+    "quizReview": "Quizzes",
+    "analytics": "Analytics",
+    "announcements": "Announcements",
+    "overview": "Overview",
+    "users": "Users & roles",
+    "approvals": "Course approvals",
+    "moderation": "Moderation",
+    "auditLog": "Audit log",
+    "settings": "Settings",
+    "learn": "Learn",
+    "teach": "Teach",
+    "govern": "Platform",
+    "allCourses": "All courses"
+  },
+  "common": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "createAccount": "Create account",
+    "search": "Search",
+    "save": "Save changes",
+    "cancel": "Cancel",
+    "retry": "Try again",
+    "loading": "Loading…",
+    "theme": "Theme",
+    "language": "Language",
+    "notifications": "Notifications",
+    "markAllRead": "Mark all as read",
+    "noNotifications": "You’re all caught up."
+  },
+  "dashboard": {
+    "greeting": "Good to see you, {{name}}",
+    "continue": "Continue where you left off",
+    "streak_one": "{{count}}-day streak",
+    "streak_other": "{{count}}-day streak"
+  }
+}

@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens — "ink & highlighter": a study-desk palette.
+   Cool paper, deep fountain-pen blue for structure, and a single
+   highlighter yellow reserved for what the learner should notice
+   (AI citations, active lesson, streaks). */
+@layer base {
+  :root {
+    --paper: 244 246 250;
+    --surface: 255 255 255;
+    --sunken: 236 239 245;
+    --line: 220 225 234;
+    --ink: 21 30 52;
+    --ink-soft: 71 82 107;
+    --ink-faint: 91 101 121; /* ≥4.5:1 on paper, surface and tints (WCAG AA) */
+    --brand: 31 58 138;
+    --brand-strong: 22 42 104;
+    --brand-tint: 226 233 251;
+    --marker: 255 216 77;
+    --marker-ink: 77 60 0;
+    --ok: 21 112 58;
+    --warn: 154 69 8;
+    --danger: 190 18 60;
+    /* chart series — validated categorical slots 1–2 (dataviz reference palette) */
+    --series-1: #2a78d6;
+    --series-2: #eb6834;
+    color-scheme: light;
+  }
+  .dark {
+    --paper: 13 18 32;
+    --surface: 21 28 46;
+    --sunken: 17 23 39;
+    --line: 41 51 76;
+    --ink: 228 233 243;
+    --ink-soft: 170 180 202;
+    --ink-faint: 152 163 186; /* ≥4.5:1 on dark surfaces and brand tint */
+    --brand: 140 165 255;
+    --brand-strong: 176 194 255;
+    --brand-tint: 33 45 84;
+    --marker: 232 197 71;
+    --marker-ink: 40 31 0;
+    --ok: 74 222 128;
+    --warn: 251 191 36;
+    --danger: 251 113 133;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    color-scheme: dark;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-paper font-sans text-[15px] leading-relaxed text-ink;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight text-ink;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-paper;
+  }
+  ::selection {
+    background: rgb(var(--marker) / 0.6);
+    color: rgb(var(--ink));
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded px-3.5 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-brand text-white hover:bg-brand-strong dark:text-paper;
+  }
+  .btn-secondary {
+    @apply btn border border-line bg-surface text-ink hover:bg-sunken;
+  }
+  .btn-ghost {
+    @apply btn text-ink-soft hover:bg-sunken hover:text-ink;
+  }
+  .btn-danger {
+    @apply btn bg-danger text-white hover:opacity-90 dark:text-paper;
+  }
+  .input {
+    @apply form-input w-full rounded border-line bg-surface text-sm text-ink placeholder:text-ink-faint focus:border-brand focus:ring-brand;
+  }
+  .select {
+    @apply form-select w-full rounded border-line bg-surface text-sm text-ink focus:border-brand focus:ring-brand;
+  }
+  .textarea {
+    @apply form-textarea w-full rounded border-line bg-surface text-sm text-ink placeholder:text-ink-faint focus:border-brand focus:ring-brand;
+  }
+  .checkbox {
+    @apply form-checkbox rounded-sm border-line bg-surface text-brand focus:ring-brand;
+  }
+  .label {
+    @apply mb-1 block text-sm font-medium text-ink;
+  }
+  .panel {
+    @apply rounded-lg border border-line bg-surface;
+  }
+  .muted {
+    @apply text-ink-soft;
+  }
+  /* Highlighter stroke — the one signature mark of the UI */
+  .marker {
+    background-image: linear-gradient(
+      104deg,
+      transparent 0.4em,
+      rgb(var(--marker) / 0.85) 0.5em,
+      rgb(var(--marker) / 0.7) 94%,
+      transparent 96%
+    );
+    @apply rounded-sm px-1 text-marker-ink;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  .marker-underline {
+    background-image: linear-gradient(transparent 62%, rgb(var(--marker) / 0.8) 62%);
+  }
+}
+
+/* Auth showcase — one orchestrated entrance, nothing loops except the typing dots */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes dot {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+@keyframes sweep {
+  from {
+    background-size: 0% 100%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
+}
+.rise {
+  opacity: 0;
+  animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.draw-stroke {
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+  animation: draw 1.1s 0.4s ease-out forwards;
+}
+.typing-dot {
+  animation: dot 1.1s infinite ease-in-out;
+}
+.marker-sweep {
+  background-image: linear-gradient(rgb(255 216 77), rgb(255 216 77));
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  animation: sweep 0.9s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    opacity: 1;
+  }
+  .draw-stroke {
+    stroke-dashoffset: 0;
+  }
+  .marker-sweep {
+    background-size: 100% 100%;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

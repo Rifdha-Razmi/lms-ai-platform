@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "dashboard": "डैशबोर्ड",
+    "catalog": "पाठ्यक्रम सूची",
+    "myLearning": "मेरी पढ़ाई",
+    "aiTutor": "AI ट्यूटर",
+    "quizzes": "क्विज़",
+    "assignments": "असाइनमेंट",
+    "achievements": "उपलब्धियाँ",
+    "certificates": "प्रमाणपत्र",
+    "studyPlan": "अध्ययन योजना",
+    "myCourses": "मेरे पाठ्यक्रम",
+    "grading": "मूल्यांकन",
+    "quizReview": "क्विज़",
+    "analytics": "विश्लेषण",
+    "announcements": "घोषणाएँ",
+    "overview": "अवलोकन",
+    "users": "उपयोगकर्ता और भूमिकाएँ",
+    "approvals": "पाठ्यक्रम स्वीकृति",
+    "moderation": "मॉडरेशन",
+    "auditLog": "ऑडिट लॉग",
+    "settings": "सेटिंग्स",
+    "learn": "सीखें",
+    "teach": "पढ़ाएँ",
+    "govern": "प्लेटफ़ॉर्म",
+    "allCourses": "सभी पाठ्यक्रम"
+  },
+  "common": {
+    "signIn": "साइन इन करें",
+    "signOut": "साइन आउट करें",
+    "createAccount": "खाता बनाएँ",
+    "search": "खोजें",
+    "save": "बदलाव सहेजें",
+    "cancel": "रद्द करें",
+    "retry": "फिर से कोशिश करें",
+    "loading": "लोड हो रहा है…",
+    "theme": "थीम",
+    "language": "भाषा",
+    "notifications": "सूचनाएँ",
+    "markAllRead": "सभी को पढ़ा हुआ चिह्नित करें",
+    "noNotifications": "कोई नई सूचना नहीं है।"
+  },
+  "dashboard": {
+    "greeting": "आपका स्वागत है, {{name}}",
+    "continue": "जहाँ छोड़ा था, वहीं से जारी रखें",
+    "streak_one": "{{count}} दिन की लगातार पढ़ाई",
+    "streak_other": "{{count}} दिन की लगातार पढ़ाई"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "dashboard": "මුල් පිටුව",
+    "catalog": "පාඨමාලා",
+    "myLearning": "මගේ ඉගෙනුම",
+    "aiTutor": "AI ගුරුවරයා",
+    "quizzes": "ප්‍රශ්නාවලි",
+    "assignments": "පැවරුම්",
+    "achievements": "ජයග්‍රහණ",
+    "certificates": "සහතික",
+    "studyPlan": "අධ්‍යයන සැලැස්ම",
+    "settings": "සැකසුම්",
+    "learn": "ඉගෙනුම",
+    "allCourses": "සියලු පාඨමාලා"
+  },
+  "common": {
+    "signIn": "පුරනය වන්න",
+    "signOut": "ඉවත් වන්න",
+    "search": "සොයන්න",
+    "language": "භාෂාව",
+    "notifications": "දැනුම්දීම්"
+  }
+}
