@@ -98,6 +98,11 @@ export const router = createBrowserRouter(
           path: '/admin',
           element: <ProtectedRoute roles={['admin']} />,
           children: [
+            { index: true, element: page(() => import('@/pages/admin-panel/AdminOverviewPage')) },
+            { path: 'users', element: page(() => import('@/pages/admin-panel/UsersPage')) },
+            { path: 'approvals', element: page(() => import('@/pages/admin-panel/ApprovalsPage')) },
+            { path: 'moderation', element: page(() => import('@/pages/admin-panel/ModerationPage')) },
+            { path: 'audit', element: page(() => import('@/pages/admin-panel/AuditLogPage')) },
           ],
         },
         { path: '*', element: <NotFoundPage /> },
