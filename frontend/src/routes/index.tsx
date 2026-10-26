@@ -83,6 +83,15 @@ export const router = createBrowserRouter(
           path: '/instructor',
           element: <ProtectedRoute roles={['instructor', 'admin']} />,
           children: [
+            { index: true, element: page(() => import('@/pages/instructor/InstructorDashboard')) },
+            { path: 'courses', element: page(() => import('@/pages/instructor/InstructorCoursesPage')) },
+            { path: 'courses/new', element: page(() => import('@/pages/instructor/CourseEditorPage')) },
+            { path: 'courses/:courseId', element: page(() => import('@/pages/instructor/CourseEditorPage')) },
+            { path: 'grading', element: page(() => import('@/pages/instructor/GradingPage')) },
+            { path: 'quizzes', element: page(() => import('@/pages/instructor/QuizManagerPage')) },
+            { path: 'quizzes/:quizId', element: page(() => import('@/pages/instructor/QuizEditorPage')) },
+            { path: 'analytics', element: page(() => import('@/pages/instructor/AnalyticsPage')) },
+            { path: 'announcements', element: page(() => import('@/pages/instructor/AnnouncementsPage')) },
           ],
         },
         {
