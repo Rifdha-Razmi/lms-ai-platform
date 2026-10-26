@@ -70,6 +70,8 @@ export const router = createBrowserRouter(
             { path: '/assignments', element: page(() => import('@/pages/student/AssignmentsPage')) },
             { path: '/tutor/:sessionId?', element: page(() => import('@/pages/student/TutorPage')) },
             { path: '/study-plan', element: page(() => import('@/pages/student/StudyPlanPage')) },
+            { path: '/achievements', element: page(() => import('@/pages/student/AchievementsPage')) },
+            { path: '/certificates', element: page(() => import('@/pages/student/CertificatesPage')) },
           ],
         },
         {
