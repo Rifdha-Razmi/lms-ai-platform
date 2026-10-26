@@ -9,6 +9,9 @@ AI tutor that answers only from a course's own lectures, with clickable source c
 > (`ai-service/`) from PRD §10 are built separately. Until they exist, the app runs against an in-browser
 > mock API that implements the exact PRD §8 contract, so switching to the real backend is a single env change.
 
+🌐 **Live demo:** https://lms-ai-platform-nine.vercel.app (mock mode, demo accounts below) ·
+📦 **Repository:** https://github.com/Rifdha-Razmi/lms-ai-platform
+
 📄 **Documentation:** [docs/](docs/README.md) — [PRD coverage](docs/prd-coverage.md) ·
 [Architecture](docs/architecture.md) · [API contract](docs/api-contract.md) · [Screenshots](docs/README.md#screenshots)
 
