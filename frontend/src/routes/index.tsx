@@ -32,6 +32,8 @@ export const router = createBrowserRouter(
         {
           element: <GuestOnly />,
           children: [
+            { path: '/login', element: page(() => import('@/pages/auth/LoginPage')) },
+            { path: '/register', element: page(() => import('@/pages/auth/RegisterPage')) },
           ],
         },
       ],
