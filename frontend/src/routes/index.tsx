@@ -59,6 +59,12 @@ export const router = createBrowserRouter(
         {
           element: <ProtectedRoute roles={['student']} />,
           children: [
+            { path: '/dashboard', element: page(() => import('@/pages/dashboard/StudentDashboard')) },
+            { path: '/my-learning', element: page(() => import('@/pages/student/MyLearningPage')) },
+            {
+              path: '/learn/:courseId/:lectureId?',
+              element: page(() => import('@/pages/course-player/CoursePlayerPage')),
+            },
             { path: '/tutor/:sessionId?', element: page(() => import('@/pages/student/TutorPage')) },
             { path: '/study-plan', element: page(() => import('@/pages/student/StudyPlanPage')) },
           ],
