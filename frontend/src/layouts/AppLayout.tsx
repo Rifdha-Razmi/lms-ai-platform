@@ -255,7 +255,7 @@ export function AppLayout() {
   const location = useLocation();
   useEffect(() => setSidebarOpen(false), [location.pathname, setSidebarOpen]);
 
-  // Keep roles fresh — e.g. an admin approves an instructor application while the user is signed in.
+  // Keep roles fresh — e.g. an admin grants the instructor role while the user is signed in.
   const me = useQuery({
     queryKey: qk.me,
     queryFn: authService.me,
