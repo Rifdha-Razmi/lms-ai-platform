@@ -54,6 +54,11 @@ export const router = createBrowserRouter(
           element: <ProtectedRoute />,
           children: [
             { path: '/settings', element: page(() => import('@/pages/common/SettingsPage')) },
+            { path: '/courses/:courseId/forum', element: page(() => import('@/pages/student/ForumPage')) },
+            {
+              path: '/courses/:courseId/forum/:threadId',
+              element: page(() => import('@/pages/student/ThreadPage')),
+            },
           ],
         },
         {
