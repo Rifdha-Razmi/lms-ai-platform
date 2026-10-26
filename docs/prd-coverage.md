@@ -122,6 +122,6 @@ FR-A7 flashcards), and student self-registration as an instructor (PRD: register
 | 15–21 | AI tutor UI with citations, summaries, flashcards, AI quiz review, depth modes, mastery, study plan, recommendations | ✅ |
 | 22–24 | Admin panel, approvals, metrics, moderation, forum, announcements, notifications | ✅ |
 | 25 | Dark mode, accessibility pass, i18n scaffolding | ✅ |
-| 26 | Containerise (Dockerfile + NGINX), CI pipeline (GitHub Actions) | ✅ files ready — runs once pushed to GitHub |
+| 26 | Containerise (Dockerfile + NGINX), CI pipeline (GitHub Actions) | ✅ CI runs on every pull request |
 | 27 | Bug fixes, security review | ✅ |
-| 28 | Seed demo data, README + documentation, deploy | ✅ docs · ⏳ deploy (needs the team's Vercel / cloud account) |
+| 28 | Seed demo data, README + documentation, deploy | ✅ — live on Vercel: https://lms-ai-platform-nine.vercel.app |
