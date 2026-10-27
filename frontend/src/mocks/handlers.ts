@@ -322,7 +322,7 @@ export const handlers = [
     p('/auth/register'),
     route(async ({ request }) => {
       rateLimit('auth', 10);
-      // Public sign-up always creates a student (PRD §8.1). Teaching needs an approved application.
+      // Public sign-up always creates a student (PRD §8.1). An admin grants other roles (FR-AD4).
       const b = await body<{ full_name?: string; email?: string; password?: string }>(request);
       if (!b.full_name || b.full_name.trim().length < 2)
         fail(400, 'VALIDATION_ERROR', 'Enter your full name.', 'full_name');
@@ -2083,7 +2083,7 @@ export const handlers = [
     }),
   ),
 
-  // Health check (PRD §6 observability) — handy for the gateway status pill
+  // Health check (PRD §6 observability) — for the gateway and uptime monitoring
   http.get(p('/health'), () => HttpResponse.json({ status: 'ok', mode: 'mock' })),
 ];
 

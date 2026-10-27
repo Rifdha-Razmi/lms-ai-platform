@@ -22,7 +22,7 @@ export default function CatalogPage() {
   const timer = useRef<number>();
   const [showFilters, setShowFilters] = useState(false);
 
-  // URL changed from outside (top-bar search, back button) -> update the box
+  // URL changed from outside (back/forward, a shared link) -> update the box
   useEffect(() => setQ(urlQ), [urlQ]);
   useEffect(() => () => window.clearTimeout(timer.current), []);
 

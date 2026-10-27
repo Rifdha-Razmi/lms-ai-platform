@@ -37,7 +37,7 @@ function NotebookArt() {
           opacity="0.9"
         />
         <path d="M74 132 H146" />
-        {/* right page: tiny diagram (a tree, it's an LMS for CS) */}
+        {/* right page: small tree diagram */}
         <path d="M244 92 L218 128 M244 92 L270 128 M218 128 L204 164 M218 128 L232 164" opacity="0.6" />
         <circle cx="244" cy="92" r="7" fill="rgb(var(--surface))" />
         <circle cx="218" cy="128" r="7" fill="rgb(var(--surface))" />
